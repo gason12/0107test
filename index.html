@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>實作題(一)</title>
+    <style>
+        #profile-container {
+            text-align: center;
+            margin-top: 0px;
+        }
+
+        #profile-image {
+            border-radius: 0%;
+            border: 0px solid black;
+            max-width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="profile-container">
+    <h2 id="student-id">學號:91018127</h2>
+    <h2 id="student-name">姓名: 張崴翔</h2>
+    <img id="profile-image" src="img1.jpg" alt="大頭照">
+    <br>
+    <button onclick="adjustText()">調整字體和顏色</button>
+    <button onclick="adjustImage()">調整大頭照樣式</button>
+    <button onclick="changeImage()">換圖</button>
+</div>
+
+<script>
+    function adjustText() {
+        var studentIdElement = document.getElementById("student-id");
+        var studentNameElement = document.getElementById("student-name");
+
+        studentIdElement.style.fontSize = "20px";
+        studentNameElement.style.fontSize = "20px";
+        studentIdElement.style.color = "blue";
+        studentNameElement.style.color = "green";
+    }
+
+    function adjustImage() {
+        var profileImageElement = document.getElementById("profile-image");
+
+        profileImageElement.style.borderRadius = "50%";
+        profileImageElement.style.border = "4px solid red";
+    }
+
+    function changeImage() {
+        var profileImageElement = document.getElementById("profile-image");
+
+        profileImageElement.src = "img2.jpg";
+        profileImageElement.alt = "img2.jpg";
+    }
+</script>
+
+</body>
+</html>
